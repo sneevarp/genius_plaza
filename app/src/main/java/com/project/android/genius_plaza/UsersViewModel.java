@@ -5,6 +5,8 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import retrofit2.Call;
@@ -41,19 +43,19 @@ public class UsersViewModel extends ViewModel {
                 .build();
 
         Api api = retrofit.create(Api.class);
-        Call<List<Users>> call = api.getUsers();
+        Call<JSONResponse> call = api.getMyJson();
 
 
-        call.enqueue(new Callback<List<Users>>() {
+        call.enqueue(new Callback<JSONResponse>() {
             @Override
-            public void onResponse(Call<List<Users>> call, Response<List<Users>> response) {
-                Log.d("praveen", "onResponse: "+response.toString());
-                //finally we are setting the list to our MutableLiveData
-                UsersList.setValue(response.body());
+            public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {
+                Log.d("praveen", response.body().getUsers().toString());
+
+                UsersList.setValue(response.body().getUsers());
             }
 
             @Override
-            public void onFailure(Call<List<Users>> call, Throwable t) {
+            public void onFailure(Call<JSONResponse> call, Throwable t) {
                 Log.d("praveen", "api failure ");
             }
         });

@@ -8,6 +8,6 @@ import retrofit2.http.GET;
 public interface Api {
     String BASE_URL = "https://reqres.in/api/";
 
-    @GET("users/")
-    Call<List<Users>> getUsers();
+    @GET("users?page=1&per_page=12")
+    Call<JSONResponse/*List<Users>*/> getMyJson();
 }

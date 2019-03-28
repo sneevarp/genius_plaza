@@ -1,7 +1,11 @@
 package com.project.android.genius_plaza;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Users {
+        @SerializedName("first_name")
         private String firstname;
+        @SerializedName("last_name")
         private String lastname;
         private String avatar;
 
