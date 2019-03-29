@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".choice"
+    android:background="@color/cardview_dark_background">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_margin="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/get"
+        android:text="GET"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:onClick="getButton"
+        android:textColor="#FFFF"
+        android:background="@color/design_default_color_primary"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_margin="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/post"
+        android:text="POST"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:onClick="postButton"
+        android:textColor="#FFFF"
+        android:background="@color/design_default_color_primary"/>
+</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -44,8 +44,6 @@ public class UsersViewModel extends ViewModel {
 
         Api api = retrofit.create(Api.class);
         Call<JSONResponse> call = api.getMyJson();
-
-
         call.enqueue(new Callback<JSONResponse>() {
             @Override
             public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {

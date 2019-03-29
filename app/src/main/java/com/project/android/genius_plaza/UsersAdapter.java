@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
 
         Glide.with(mCtx)
                 .load(user.getAvatar())
+                .apply(RequestOptions.circleCropTransform())
                 .into(holder.avatar);
 
         holder.fname.setText(user.getFirstname());
