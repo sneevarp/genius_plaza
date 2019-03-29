@@ -46,7 +46,8 @@
             android:layout_marginTop="50dp"
             android:id="@+id/Create"
             android:textColor="#FFFF"
-            android:background="@color/design_default_color_primary"/>
+            android:background="@color/design_default_color_primary"
+            android:onClick="createButton"/>
 
 </LinearLayout>
 

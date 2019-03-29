@@ -13,6 +13,6 @@ public interface Api {
     @GET("users?page=1&per_page=12")
     Call<JSONResponse/*List<Users>*/> getMyJson();
 
-    @POST("/users")
+    @POST("users")
     Call<NewUser> createUser(@Body NewUser user);
 }

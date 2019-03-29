@@ -15,8 +15,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static android.support.constraint.Constraints.TAG;
-
 public class UsersViewModel extends ViewModel {
     private MutableLiveData<List<Users>> UsersList;
 
